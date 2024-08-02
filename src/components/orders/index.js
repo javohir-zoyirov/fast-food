@@ -24,7 +24,7 @@ export const Cards = () => {
 		setFilteredData(filteredData.filter((item) => item.id !== id));
 	};
 
-	console.log('filter data', filteredData);
+	console.log('filter data', filteredData);   
 	return (
 		<div
 			style={{ overflow: 'scroll', maxHeight: '650px', backgroundColor: '#EDEFF3', height: '100vh' }}
@@ -160,7 +160,7 @@ export const Cards = () => {
 									</div>
 
 									<div className="mt-4">
-										<p className="p-0 m-0">Umumiy summa</p>
+										<p className="p-0 m-0">Umumiy summa :</p>
 										<p>
 											<span className="fw-bold">{item?.productsPrice + 5000} </span> UZS
 										</p>
@@ -289,9 +289,9 @@ export const Cards = () => {
 												<p className="p-0 m-0 fw-bold">{item?.operator}</p>
 											</div>
 											<button
-												// onClick={() => {
-												// 	deleteCard(item.id);
-												// }}
+												onClick={() => {
+													deleteCard(item.id);
+												}}
 												style={{ border: '4px solid #EDEFF3' }}
 												type="button"
 												className="btn checkButton rounded-pill bg-white"

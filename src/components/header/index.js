@@ -62,6 +62,7 @@ export const HeaderWeb = () => {
 	};
 	const plus = (item) => {
     console.log(item,"item");
+
 		setZakasData((prev) => ({
 			...prev,
 			[item.id]: {
@@ -73,7 +74,6 @@ export const HeaderWeb = () => {
 	};
 
 	const minus = (item) => {
-		setCount(item.count);
 		setZakasData((prev) => ({
 			...prev,
 			[item.id]: {
@@ -82,6 +82,7 @@ export const HeaderWeb = () => {
 				productsPrice: item.price,
 			},
 		}));
+    setCount(item[item.id]?.count)
 	};
 
 	const saqlash = () => {
@@ -341,7 +342,7 @@ export const HeaderWeb = () => {
 						<div className="col-lg-6">
 							<div className="d-flex align-items-center justify-content-between mb-3">
 								<h5 className="p-0 m-0">Buyurtmalar ro'yxati</h5>
-                  <button style={{ backgroundColor: '#EDEFF3' }} className="btn border-0 text-dark">
+                  <button onClick={() => setZakasData([])} style={{ backgroundColor: '#EDEFF3' }} className="btn border-0 text-dark">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="16"
