@@ -1,0 +1,14 @@
+table {
+    background-color: #EDEFF3;
+}
+.ant-table-tbody > tr > td {
+    background-color: white;
+    margin-bottom: 20px;
+  }
+  
+  .ant-table-thead > tr > th {
+    background-color: white;
+    margin-bottom: 20px;
+
+  }
+  
